@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Firebase_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Firebase_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,10 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdS-YA-vr1"/>
+                                                    <segue destination="v8e-QW-cuM" kind="show" identifier="tasksSegue" id="g7H-qJ-5B2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYb-tV-oKd">
                                                 <rect key="frame" x="0.0" y="55" width="254" height="34"/>
@@ -75,6 +79,9 @@
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="registerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8i-se-0Bb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -102,13 +109,93 @@
                             <constraint firstItem="oau-Pa-Fp3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Nb4-3g-EtA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTxtFld" destination="8U7-o0-l37" id="cHp-wF-rwS"/>
+                        <outlet property="passwordTxtFld" destination="ArU-CM-dHj" id="b2N-FL-QS5"/>
+                        <outlet property="warningLbl" destination="WPD-GN-aTv" id="cbI-1n-NOK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+            <point key="canvasLocation" x="-59" y="78"/>
+        </scene>
+        <!--Tasks-->
+        <scene sceneID="jTt-BW-8Jp">
+            <objects>
+                <viewController id="L6Z-RO-drd" customClass="TasksViewController" customModule="Firebase_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5mY-t8-j2E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wNn-hC-fTk">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="BAT-ah-aSk">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BAT-ah-aSk" id="ty7-MK-Z8g">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="L6Z-RO-drd" id="86I-k9-DV1"/>
+                                    <outlet property="delegate" destination="L6Z-RO-drd" id="vPv-x8-jRs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0b3-7K-j5r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wNn-hC-fTk" secondAttribute="bottom" id="Klo-Dt-RwL"/>
+                            <constraint firstItem="wNn-hC-fTk" firstAttribute="top" secondItem="0b3-7K-j5r" secondAttribute="top" id="RmM-zp-Hdy"/>
+                            <constraint firstItem="wNn-hC-fTk" firstAttribute="leading" secondItem="0b3-7K-j5r" secondAttribute="leading" id="gSI-5r-DQV"/>
+                            <constraint firstItem="wNn-hC-fTk" firstAttribute="trailing" secondItem="0b3-7K-j5r" secondAttribute="trailing" id="gbP-w7-O3R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tasks" id="gam-VO-NgI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fHF-Nb-AKQ">
+                            <connections>
+                                <action selector="addClicked:" destination="L6Z-RO-drd" id="HqL-Ba-pWt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="wNn-hC-fTk" id="wld-qv-GRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89m-eO-kiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743.4782608695652" y="78.348214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QLa-Lr-hOJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v8e-QW-cuM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dGu-ie-F6O"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dHx-Oi-mXl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L6Z-RO-drd" kind="relationship" relationship="rootViewController" id="QSf-in-VYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dM6-8E-gf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831.88405797101461" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

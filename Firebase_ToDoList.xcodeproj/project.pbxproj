@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		BF600AD527668A38000D96D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF600AD427668A38000D96D3 /* AppDelegate.swift */; };
 		BF600AD727668A38000D96D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF600AD627668A38000D96D3 /* SceneDelegate.swift */; };
-		BF600AD927668A38000D96D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF600AD827668A38000D96D3 /* ViewController.swift */; };
+		BF600AD927668A38000D96D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF600AD827668A38000D96D3 /* LoginViewController.swift */; };
 		BF600ADC27668A38000D96D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF600ADA27668A38000D96D3 /* Main.storyboard */; };
 		BF600ADE27668A49000D96D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF600ADD27668A49000D96D3 /* Assets.xcassets */; };
 		BF600AE127668A49000D96D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF600ADF27668A49000D96D3 /* LaunchScreen.storyboard */; };
+		BF600AE927669014000D96D3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF600AE827669014000D96D3 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF600AD127668A38000D96D3 /* Firebase_ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebase_ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF600AD427668A38000D96D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF600AD627668A38000D96D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF600AD827668A38000D96D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF600AD827668A38000D96D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF600ADB27668A38000D96D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF600ADD27668A49000D96D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF600AE027668A49000D96D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF600AE227668A49000D96D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF600AE827669014000D96D3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		BF600AD327668A38000D96D3 /* Firebase_ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				BF600AEB27669077000D96D3 /* Controllers */,
 				BF600AD427668A38000D96D3 /* AppDelegate.swift */,
 				BF600AD627668A38000D96D3 /* SceneDelegate.swift */,
-				BF600AD827668A38000D96D3 /* ViewController.swift */,
 				BF600ADA27668A38000D96D3 /* Main.storyboard */,
 				BF600ADD27668A49000D96D3 /* Assets.xcassets */,
 				BF600ADF27668A49000D96D3 /* LaunchScreen.storyboard */,
 				BF600AE227668A49000D96D3 /* Info.plist */,
 			);
 			path = Firebase_ToDoList;
+			sourceTree = "<group>";
+		};
+		BF600AEB27669077000D96D3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF600AD827668A38000D96D3 /* LoginViewController.swift */,
+				BF600AE827669014000D96D3 /* TasksViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF600AD927668A38000D96D3 /* ViewController.swift in Sources */,
+				BF600AD927668A38000D96D3 /* LoginViewController.swift in Sources */,
+				BF600AE927669014000D96D3 /* TasksViewController.swift in Sources */,
 				BF600AD527668A38000D96D3 /* AppDelegate.swift in Sources */,
 				BF600AD727668A38000D96D3 /* SceneDelegate.swift in Sources */,
 			);
