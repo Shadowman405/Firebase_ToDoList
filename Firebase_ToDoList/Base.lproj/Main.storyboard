@@ -69,7 +69,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdS-YA-vr1"/>
-                                                    <segue destination="v8e-QW-cuM" kind="show" identifier="tasksSegue" id="g7H-qJ-5B2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYb-tV-oKd">
@@ -113,6 +112,7 @@
                         <outlet property="emailTxtFld" destination="8U7-o0-l37" id="cHp-wF-rwS"/>
                         <outlet property="passwordTxtFld" destination="ArU-CM-dHj" id="b2N-FL-QS5"/>
                         <outlet property="warningLbl" destination="WPD-GN-aTv" id="cbI-1n-NOK"/>
+                        <segue destination="v8e-QW-cuM" kind="show" identifier="tasksSegue" id="CFw-FS-pgl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,6 +158,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="gam-VO-NgI">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="AwZ-aV-1kR">
+                            <connections>
+                                <action selector="signoutClicked:" destination="L6Z-RO-drd" id="IP1-8c-lGc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fHF-Nb-AKQ">
                             <connections>
                                 <action selector="addClicked:" destination="L6Z-RO-drd" id="HqL-Ba-pWt"/>
