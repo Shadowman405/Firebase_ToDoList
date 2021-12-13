@@ -15,8 +15,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
     }
+    
     
     @IBAction func loginClicked(_ sender: UIButton) {
     }
@@ -26,3 +29,19 @@ class LoginViewController: UIViewController {
     
 }
 
+
+//MARK: - Keyboard adaptation for small devices
+
+extension LoginViewController {
+    @objc func kbDidShow(notification: Notification) {
+        guard let userInfo = notification.userInfo else {return}
+        let kbFrameSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        (self.view as! UIScrollView) .contentSize = CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height + kbFrameSize.height)
+        
+        (self.view as! UIScrollView).scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbFrameSize.height, right: 0)
+    }
+    
+    @objc func kbDidHide() {
+        (self.view as! UIScrollView) .contentSize = CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+    }
+}
