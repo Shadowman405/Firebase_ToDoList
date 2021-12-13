@@ -112,7 +112,7 @@
                         <outlet property="emailTxtFld" destination="8U7-o0-l37" id="cHp-wF-rwS"/>
                         <outlet property="passwordTxtFld" destination="ArU-CM-dHj" id="b2N-FL-QS5"/>
                         <outlet property="warningLbl" destination="WPD-GN-aTv" id="cbI-1n-NOK"/>
-                        <segue destination="v8e-QW-cuM" kind="show" identifier="tasksSegue" id="CFw-FS-pgl"/>
+                        <segue destination="v8e-QW-cuM" kind="presentation" identifier="tasksSegue" id="CFw-FS-pgl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
