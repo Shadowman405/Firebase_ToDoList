@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
+        
         Auth.auth().addStateDidChangeListener {[weak self] auth, user in
             if user != nil {
                 self?.performSegue(withIdentifier: (self?.segueID)!, sender: nil)

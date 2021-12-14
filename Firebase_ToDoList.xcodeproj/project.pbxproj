@@ -15,7 +15,6 @@
 		BF600ADE27668A49000D96D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF600ADD27668A49000D96D3 /* Assets.xcassets */; };
 		BF600AE127668A49000D96D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF600ADF27668A49000D96D3 /* LaunchScreen.storyboard */; };
 		BF600AE927669014000D96D3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF600AE827669014000D96D3 /* TasksViewController.swift */; };
-		BFE6D8FF2767E2890032556C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFE6D8FE2767E2890032556C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		BF600AE027668A49000D96D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF600AE227668A49000D96D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF600AE827669014000D96D3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
-		BFE6D8FE2767E2890032556C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C900C61247AE3BE73868524C /* Pods_Firebase_ToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_ToDoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80CEFBD10CFA80C38CD0B96 /* Pods-Firebase_ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_ToDoList.debug.xcconfig"; path = "Target Support Files/Pods-Firebase_ToDoList/Pods-Firebase_ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +81,6 @@
 				BF600ADD27668A49000D96D3 /* Assets.xcassets */,
 				BF600ADF27668A49000D96D3 /* LaunchScreen.storyboard */,
 				BF600AE227668A49000D96D3 /* Info.plist */,
-				BFE6D8FE2767E2890032556C /* GoogleService-Info.plist */,
 			);
 			path = Firebase_ToDoList;
 			sourceTree = "<group>";
@@ -164,7 +161,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE6D8FF2767E2890032556C /* GoogleService-Info.plist in Resources */,
 				BF600AE127668A49000D96D3 /* LaunchScreen.storyboard in Resources */,
 				BF600ADE27668A49000D96D3 /* Assets.xcassets in Resources */,
 				BF600ADC27668A38000D96D3 /* Main.storyboard in Resources */,
