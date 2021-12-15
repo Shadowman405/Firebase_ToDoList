@@ -15,6 +15,9 @@
 		BF600ADE27668A49000D96D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF600ADD27668A49000D96D3 /* Assets.xcassets */; };
 		BF600AE127668A49000D96D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF600ADF27668A49000D96D3 /* LaunchScreen.storyboard */; };
 		BF600AE927669014000D96D3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF600AE827669014000D96D3 /* TasksViewController.swift */; };
+		BFE6D903276A71960032556C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFE6D902276A71950032556C /* GoogleService-Info.plist */; };
+		BFE6D906276A72ED0032556C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6D905276A72ED0032556C /* Task.swift */; };
+		BFE6D908276A72FB0032556C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6D907276A72FB0032556C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		BF600AE027668A49000D96D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF600AE227668A49000D96D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF600AE827669014000D96D3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		BFE6D902276A71950032556C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFE6D905276A72ED0032556C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		BFE6D907276A72FB0032556C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C900C61247AE3BE73868524C /* Pods_Firebase_ToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_ToDoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80CEFBD10CFA80C38CD0B96 /* Pods-Firebase_ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_ToDoList.debug.xcconfig"; path = "Target Support Files/Pods-Firebase_ToDoList/Pods-Firebase_ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +80,7 @@
 		BF600AD327668A38000D96D3 /* Firebase_ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				BFE6D904276A72D10032556C /* Model */,
 				BF600AEB27669077000D96D3 /* Controllers */,
 				BF600AD427668A38000D96D3 /* AppDelegate.swift */,
 				BF600AD627668A38000D96D3 /* SceneDelegate.swift */,
@@ -81,6 +88,7 @@
 				BF600ADD27668A49000D96D3 /* Assets.xcassets */,
 				BF600ADF27668A49000D96D3 /* LaunchScreen.storyboard */,
 				BF600AE227668A49000D96D3 /* Info.plist */,
+				BFE6D902276A71950032556C /* GoogleService-Info.plist */,
 			);
 			path = Firebase_ToDoList;
 			sourceTree = "<group>";
@@ -92,6 +100,15 @@
 				BF600AE827669014000D96D3 /* TasksViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFE6D904276A72D10032556C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFE6D905276A72ED0032556C /* Task.swift */,
+				BFE6D907276A72FB0032556C /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F3FF74D37674E0073AF55732 /* Frameworks */ = {
@@ -162,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF600AE127668A49000D96D3 /* LaunchScreen.storyboard in Resources */,
+				BFE6D903276A71960032556C /* GoogleService-Info.plist in Resources */,
 				BF600ADE27668A49000D96D3 /* Assets.xcassets in Resources */,
 				BF600ADC27668A38000D96D3 /* Main.storyboard in Resources */,
 			);
@@ -218,6 +236,8 @@
 			files = (
 				BF600AD927668A38000D96D3 /* LoginViewController.swift in Sources */,
 				BF600AE927669014000D96D3 /* TasksViewController.swift in Sources */,
+				BFE6D908276A72FB0032556C /* User.swift in Sources */,
+				BFE6D906276A72ED0032556C /* Task.swift in Sources */,
 				BF600AD527668A38000D96D3 /* AppDelegate.swift in Sources */,
 				BF600AD727668A38000D96D3 /* SceneDelegate.swift in Sources */,
 			);

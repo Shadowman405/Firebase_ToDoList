@@ -18,6 +18,18 @@ class TasksViewController: UIViewController {
     }
 
     @IBAction func addClicked(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "New Task", message: "Add new task", preferredStyle: .alert)
+        alertController.addTextField()
+        let save = UIAlertAction(title: "Save", style: .default) { _ in
+            guard let texField = alertController.textFields?.first, texField.text != "" else {return}
+            
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alertController.addAction(save)
+        alertController.addAction(cancel)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func signoutClicked(_ sender: Any) {
